@@ -1,22 +1,22 @@
-var add = document.querySelector("#add");
-var h2 = document.querySelector("h2");
+var img = document.querySelector("img");
+var love = document.querySelector("i")
 
-var flag = 0
-add.addEventListener("click", function () {
-    if (flag === 0) {
-        h2.innerHTML = "Programmer"
-        h2.style.color = "blue"
-        flag  = 1;
-        add.innerHTML ="Remove"
-        add.style.backgroundColor = "transparent"
-    }
-    else{
-        add.innerHTML ="Add Friend`"
-        add.style.backgroundColor = "darkcyan"
-        h2.innerHTML = "Creator"
-        h2.style.color = "red"
-        flag=0 ; 
 
-    }
+img.addEventListener("dblclick",function(){
+    love.style.transform = "translate(-50%,-50%) scale(1) rotate(0deg)"
+    
+    setTimeout(() => {
+        love.style.opacity = 0;
+        love.style.transform = "translate(-50%,-330%) scale(0) rotate(200deg)";
+    }, 700);
+    setTimeout(() => {
+        love.style.opacity = 1;
+        
+    }, 900);
+    setTimeout(() => {
+        love.style.transform = "translate(-50%,-50%) scale(0) rotate(-60deg)";
+        
+    }, 1100);
+
+
 })
-
