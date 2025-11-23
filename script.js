@@ -1,16 +1,22 @@
-var body  =document.body;
-var img =document.querySelector("img")
+var add = document.querySelector("#add");
+var h2 = document.querySelector("h2");
 
-body.addEventListener("mousemove",function(dets){
-    img.style.left = dets.x + 'px'
-    img.style.top = dets.y + 'px'
-    img.style.transform = 'translate(-50% , -50%)';
+var flag = 0
+add.addEventListener("click", function () {
+    if (flag === 0) {
+        h2.innerHTML = "Programmer"
+        h2.style.color = "blue"
+        flag  = 1;
+        add.innerHTML ="Remove"
+        add.style.backgroundColor = "transparent"
+    }
+    else{
+        add.innerHTML ="Add Friend`"
+        add.style.backgroundColor = "darkcyan"
+        h2.innerHTML = "Creator"
+        h2.style.color = "red"
+        flag=0 ; 
+
+    }
 })
 
-
-// var div =document.querySelector("div")
-// body.addEventListener("mousemove",function(dets){
-//     div.style.left = dets.x + 'px'
-//     div.style.top = dets.y + 'px'
-//     div.style.transform = 'translate(-50% , -50%)';
-// })
