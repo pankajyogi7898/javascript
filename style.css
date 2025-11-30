@@ -16,7 +16,22 @@ body{
   align-items: center;
   justify-content: center;
 }
-p{
-  font-size: 2rem;
-  color: rgb(1, 255, 39);
+
+@keyframes changebg{
+  from{
+    background-color: red;
+    scale: 1;
+    border-radius: 0px;
+  }
+  to{
+    background-color: rgb(0, 217, 255);
+    scale: 0.50;
+    border-radius: 200px;
+  }
+}
+
+.box1{
+  width: 600px;
+  height: 300px;
+  animation: changebg 10s both;
 }
